@@ -8,4 +8,8 @@ describe('Testing countRegNumber' , function(){
         var regCount = countRegNumber('12328,22233')
         assert.equal(regCount, 2);  
     });
+    it("should count and return 0, 'no registration number'" , function(){
+        var regCount = countRegNumber('0')
+        assert.equal(regCount,1);  
+    });
     });

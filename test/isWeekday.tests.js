@@ -1,32 +1,23 @@
 describe('Testing weekdays of the week' , function(){
-    it("should return Monday, 'Monday is the day of the week'" , function(){
+    it("should return true when weekdays is(Monday,Tuesday,Wednesday,Thursday,Friday)" , function(){
      assert.equal(isWeekday('Monday'), true); 
+     assert.equal(isWeekday('Tuesday'), true);
+     assert.equal(isWeekday('Wednesday'), true);
+     assert.equal(isWeekday('Thursday'), true);
+     assert.equal(isWeekday('Friday'), true);
 
     });
 
-it("should return Tuesday, 'Tuesday is the day of the week'" , function(){
- assert.equal(isWeekday('Tuesday'), true);
-
-});
-
-it("should return Wednesday, 'Wednesday is the day of the week'" , function(){
- assert.equal(isWeekday('Wednesday'), true);
-});
-
-it("should return Thursday, 'Thursday is the day of the week'" , function(){
-    assert.equal(isWeekday('Thursday'), true);
-
-});
-
-it("should return Friday, 'Friday is the day of the week'" , function(){
-    assert.equal(isWeekday('Friday'), true);
-});
-
-it("should return Saturday, 'Saturday is not the day of the week'" , function(){
+it("should return false Saturday and Sunday are not weekdays" , function(){
  assert.equal(isWeekday('Saturday'), false); 
-});
-
-it("should return Sunday, 'Sunday is not the day of the week'" , function(){
  assert.equal(isWeekday('Sunday'), false); 
 });
+
+it("should return January is not the day of the week'" , function(){
+    assert.equal(isWeekday('January is not a day of the week'), true); 
+   });
+
+   it("should return '' if it is an empty string" , function(){
+    assert.equal(isWeekday(''), true); 
+   });
 });

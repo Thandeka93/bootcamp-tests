@@ -1,4 +1,4 @@
-function allFromTown(regNo, Town){
+function countAllFromTown(regNo, Town){
     let registration = regNo.split(',');
       let arr = [];
       for (let i=0;i<registration.length;i++){

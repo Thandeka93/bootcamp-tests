@@ -8,5 +8,9 @@ describe('Testing greet function' , function(){
         assert.equal(greet('Sam'), 'Hello, Sam');
 
     });
+    it("should return 'Hello, Thandeka' " , function(){
+        assert.equal(greet('Thandeka'), 'Hello, Thandeka');
+
+    });
 
 });
